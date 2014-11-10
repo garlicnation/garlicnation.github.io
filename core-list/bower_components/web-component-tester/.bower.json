@@ -1,0 +1,18 @@
+{
+  "name": "web-component-tester",
+  "private": true,
+  "dependencies": {
+    "chai": "chai#1.9.1",
+    "mocha": "mocha#^1.21.4"
+  },
+  "homepage": "https://github.com/Polymer/web-component-tester",
+  "_release": "4e4e19e5a6",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "4e4e19e5a69a99f64302d3b6abb59d9d2e2d4c78"
+  },
+  "_source": "git://github.com/Polymer/web-component-tester.git",
+  "_target": "master",
+  "_originalSource": "Polymer/web-component-tester"
+}

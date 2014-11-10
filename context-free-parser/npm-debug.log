@@ -1,0 +1,77 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/homebrew/bin/npm', 'publish' ]
+2 info using npm@2.0.2
+3 info using node@v0.10.32
+4 verbose node symlink /usr/local/homebrew/bin/node
+5 verbose publish [ '.' ]
+6 verbose cache add [ '.', null ]
+7 verbose cache add spec="." args=[".",null]
+8 verbose parsed spec { raw: '.',
+8 verbose parsed spec   scope: null,
+8 verbose parsed spec   name: null,
+8 verbose parsed spec   rawSpec: '.',
+8 verbose parsed spec   spec: '/Users/ajo/workspace/polymer/polymer_git/components/context-free-parser',
+8 verbose parsed spec   type: 'local' }
+9 verbose cache add local package /Users/ajo/workspace/polymer/polymer_git/components/context-free-parser
+10 silly lockFile 3a52ce78- .
+11 verbose lock . /Users/ajo/.npm/3a52ce78-.lock
+12 verbose tar pack [ '/Users/ajo/.npm/polymer-context-free-parser/0.4.2/package.tgz',
+12 verbose tar pack   '.' ]
+13 verbose tarball /Users/ajo/.npm/polymer-context-free-parser/0.4.2/package.tgz
+14 verbose folder .
+15 info prepublish polymer-context-free-parser@0.4.2
+16 silly lockFile 1f1177db-tar tar://.
+17 verbose lock tar://. /Users/ajo/.npm/1f1177db-tar.lock
+18 silly lockFile 70c872a8-xt-free-parser-0-4-2-package-tgz tar:///Users/ajo/.npm/polymer-context-free-parser/0.4.2/package.tgz
+19 verbose lock tar:///Users/ajo/.npm/polymer-context-free-parser/0.4.2/package.tgz /Users/ajo/.npm/70c872a8-xt-free-parser-0-4-2-package-tgz.lock
+20 silly lockFile 1f1177db-tar tar://.
+21 silly lockFile 1f1177db-tar tar://.
+22 silly lockFile 70c872a8-xt-free-parser-0-4-2-package-tgz tar:///Users/ajo/.npm/polymer-context-free-parser/0.4.2/package.tgz
+23 silly lockFile 70c872a8-xt-free-parser-0-4-2-package-tgz tar:///Users/ajo/.npm/polymer-context-free-parser/0.4.2/package.tgz
+24 silly lockFile 2bc4f12f-ontext-free-parser-0-4-2-package /Users/ajo/.npm/polymer-context-free-parser/0.4.2/package
+25 verbose lock /Users/ajo/.npm/polymer-context-free-parser/0.4.2/package /Users/ajo/.npm/2bc4f12f-ontext-free-parser-0-4-2-package.lock
+26 silly lockFile 2bc4f12f-ontext-free-parser-0-4-2-package /Users/ajo/.npm/polymer-context-free-parser/0.4.2/package
+27 silly lockFile 2bc4f12f-ontext-free-parser-0-4-2-package /Users/ajo/.npm/polymer-context-free-parser/0.4.2/package
+28 silly lockFile 3a52ce78- .
+29 silly lockFile 3a52ce78- .
+30 silly publish { name: 'polymer-context-free-parser',
+30 silly publish   version: '0.4.2',
+30 silly publish   description: 'context-free-parser scrapes source documentation data from input text or url.',
+30 silly publish   main: 'context-free-parser.js',
+30 silly publish   repository:
+30 silly publish    { type: 'git',
+30 silly publish      url: 'ssh://git@github.com/Polymer/context-free-parser.git' },
+30 silly publish   author: { name: 'The Polymer Authors' },
+30 silly publish   license: 'BSD',
+30 silly publish   bugs: { url: 'https://github.com/Polymer/context-free-parser/issues' },
+30 silly publish   homepage: 'https://github.com/Polymer/context-free-parser',
+30 silly publish   readme: 'context-free-parser\n===================\n\nSee the [component landing page](http://polymer.github.io/context-free-parser) for more information.',
+30 silly publish   readmeFilename: 'README.md',
+30 silly publish   gitHead: 'f4de18b1ebd9379c3c292c0042643d80cce4c237',
+30 silly publish   _id: 'polymer-context-free-parser@0.4.2',
+30 silly publish   scripts: {},
+30 silly publish   _shasum: '22c06c13fdd457a356e9b98af7ca13ac083b794d',
+30 silly publish   _from: '.' }
+31 verbose mapToRegistry name polymer-context-free-parser
+32 verbose mapToRegistry uri https://registry.npmjs.org/polymer-context-free-parser
+33 verbose publish registryBase https://registry.npmjs.org/
+34 verbose stack Error: auth and email required for publishing
+34 verbose stack     at RegClient.publish (/usr/local/homebrew/lib/node_modules/npm/node_modules/npm-registry-client/lib/publish.js:17:14)
+34 verbose stack     at /usr/local/homebrew/lib/node_modules/npm/lib/publish.js:114:14
+34 verbose stack     at mapToRegistry (/usr/local/homebrew/lib/node_modules/npm/lib/utils/map-to-registry.js:53:3)
+34 verbose stack     at publish_ (/usr/local/homebrew/lib/node_modules/npm/lib/publish.js:102:3)
+34 verbose stack     at Array.1 (/usr/local/homebrew/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+34 verbose stack     at LOOP (/usr/local/homebrew/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+34 verbose stack     at LOOP (/usr/local/homebrew/lib/node_modules/npm/node_modules/slide/lib/chain.js:14:28)
+34 verbose stack     at chain (/usr/local/homebrew/lib/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
+34 verbose stack     at /usr/local/homebrew/lib/node_modules/npm/lib/publish.js:62:5
+34 verbose stack     at /usr/local/homebrew/lib/node_modules/npm/node_modules/inflight/inflight.js:22:7
+35 verbose cwd /Users/ajo/workspace/polymer/polymer_git/components/context-free-parser
+36 error Darwin 13.4.0
+37 error argv "node" "/usr/local/homebrew/bin/npm" "publish"
+38 error node v0.10.32
+39 error npm  v2.0.2
+40 error code ENEEDAUTH
+41 error need auth auth and email required for publishing
+41 error need auth You need to authorize this machine using `npm adduser`
+42 verbose exit [ 1, true ]

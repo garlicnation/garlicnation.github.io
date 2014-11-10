@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+    <title>Firebase Simple Login Tests</title>
+
+    <!-- Jasmine -->
+    <script src='../../../bower_components/jasmine/lib/jasmine-core/jasmine.js'></script>
+    <script src='../../../bower_components/jasmine/lib/jasmine-core/jasmine-html.js'></script>
+    <script src='../../../bower_components/jasmine/lib/jasmine-core/boot.js'></script>
+    <link rel='stylesheet' href='../../../bower_components/jasmine/lib/jasmine-core/jasmine.css'>
+
+    <!-- jQuery -->
+    <script src='../../../bower_components/jquery/dist/jquery.min.js'></script>
+
+    <!-- Firebase -->
+    <script src='../../../bower_components/firebase/firebase.js'></script>
+
+    <!-- Jasmine specs -->
+    <script src='specs/init.spec.js'></script>
+    <script src='specs/simpleLogin.spec.js'></script>
+    <script src='specs/emailPasswordAuth.spec.js'></script>
+    <script src='specs/anonymousAuth.spec.js'></script>
+    <script src='specs/thirdPartyAuth.spec.js'></script>
+
+    <!-- Source files -->
+    <script src='../../../firebase-simple-login.js'></script>
+
+    <style>
+      #status {
+        font-family: Arial;
+        padding: 5px 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin-bottom: 5px;
+      }
+      #login-response {
+        font-size: 11px;
+        white-space: pre-wrap;
+      }
+    </style>
+
+    <script type='text/javascript'>
+      var $el, ref, auth;
+      $(function() {
+        $el = $('#login-response');
+        ref = new Firebase(TEST_NAMESPACE);
+        auth = new FirebaseSimpleLogin(ref, function(error, user) {
+          var content = '<b>error:</b> ' + JSON.stringify(error, null, 2) + '<br/>';
+          content += '<b>user: </b> ' + JSON.stringify(user, null, 2) + '<br/>';
+          $el.html(content);
+          if (user && console && console.log) {
+            console.log(user);
+          }
+        }, /* context */ null, /* apiHost */ TEST_AUTH_SERVER);
+      });
+
+      function login(provider, options) {
+        logout();
+        $el.html('waiting...')
+        auth.login(provider, options);
+      }
+
+      function logout() {
+        auth.logout();
+      }
+    </script>
+  </head>
+  <body>
+    <div id='status'>
+      <b>User State:</b>
+      <pre id='login-response' class='prettyprint'></pre>
+    </div>
+    <div>
+      <a href='#' onclick='login("anonymous")'>Anonymous</a>
+      <a href='#' onclick='login("facebook")'>Facebook</a>
+      <a href='#' onclick='login("github")'>GitHub</a>
+      <a href='#' onclick='login("google")'>Google</a>
+      <a href='#' onclick='login("twitter")'>Twitter</a>
+      <a href='#' onclick='logout()'>Logout</a>
+    </div>
+  </body>
+</html>
